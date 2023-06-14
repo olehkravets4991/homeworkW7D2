@@ -18,9 +18,9 @@
 <body>
     <h1>Welcome to gitPub</h1>
     <ul>
-      <% drinks.forEach(function(drink) { %>
-        <li><%= capitalizeFirstLetter(drink.name) %></li>
-      <% }); %>
+        <% drinks.forEach(function(drink, index) { %>
+            <li><a href="/drinks/<%= index %>"><%= capitalizeFirstLetter(drink.name) %></a></li>
+          <% }); %>
     </ul>
   </body>
 </html>
