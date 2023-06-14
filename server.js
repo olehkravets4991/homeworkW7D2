@@ -5,6 +5,8 @@ const drinks = require('./models/drinks');
 
 app.set('view engine', 'ejs');
 
+app.use(express.static(__dirname + '/public'));
+
 
 app.get('/drinks/:id', (req, res) => {
     const drinkId = req.params.id;
