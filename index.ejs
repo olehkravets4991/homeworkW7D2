@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to gitPub</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to gitPub</h1>
+  <% drinks.forEach(function(drink) { %>
+    <div>
+      <h2><%= drink.name %></h2>
+      <p>Price: <%= drink.price %></p>
+      <img src="<%= drink.image %>.jpg" alt="<%= drink.name %>">
+    </div>
+  <% }); %>
+</body>
+</html>

@@ -3,8 +3,11 @@ const app = express();
 const drinks = require('./models/drinks');
 
 
+app.set('view engine', 'ejs');
+
+
 app.get('/drinks', (req, res) => {
-  res.send(drinks);
+  res.render('index', { drinks: drinks });
 });
 
 
