@@ -10,14 +10,17 @@
     }
   </style>
 </head>
+<script>
+    function capitalizeFirstLetter(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+  </script>
 <body>
-  <h1>Welcome to gitPub</h1>
-  <% drinks.forEach(function(drink) { %>
-    <div>
-      <h2><%= drink.name %></h2>
-      <p>Price: <%= drink.price %></p>
-      <img src="<%= drink.image %>.jpg" alt="<%= drink.name %>">
-    </div>
-  <% }); %>
-</body>
+    <h1>Welcome to gitPub</h1>
+    <ul>
+      <% drinks.forEach(function(drink) { %>
+        <li><%= capitalizeFirstLetter(drink.name) %></li>
+      <% }); %>
+    </ul>
+  </body>
 </html>
