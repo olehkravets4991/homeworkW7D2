@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-<head>
+
+
   <meta charset="UTF-8">
   <title>Welcome to gitPub</title>
   <style>
@@ -9,18 +9,18 @@
       color: #333;
     }
   </style>
-</head>
+
 <script>
     function capitalizeFirstLetter(string) {
       return string.charAt(0).toUpperCase() + string.slice(1);
     }
   </script>
-<body>
+
     <h1>Welcome to gitPub</h1>
     <ul>
         <% drinks.forEach(function(drink, index) { %>
             <li><a href="/drinks/<%= index %>"><%= capitalizeFirstLetter(drink.name) %></a></li>
           <% }); %>
     </ul>
-  </body>
-</html>
+  
+

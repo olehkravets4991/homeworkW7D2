@@ -7,7 +7,9 @@ app.set('view engine', 'ejs');
 
 
 app.get('/drinks/:id', (req, res) => {
-    res.send(req.params.id);
+    const drinkId = req.params.id;
+    const drink = drinks[drinkId];
+    res.render('show', { drink: drink });
   });
 
 app.listen(3000, () => {
