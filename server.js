@@ -67,7 +67,69 @@ app.get('/drinks', (req, res) => {
   res.render('index', { drinks: drinks });
 });
 
+// Route to render the show.ejs template for a specific drink
+app.get('/drinks/:id', (req, res) => {
+  const drinkId = req.params.id;
+  const drink = drinks[drinkId];
+  res.render('show', { drink: drink });
+});
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+
+
+// const express = require('express');
+// const app = express();
+// const drinks = require('./drinks');
+
+// app.set('view engine', 'ejs');
+
+// app.get('/', (req, res) => {
+//   res.send('Welcome to the Gitpub App!');
+// });
+
+// app.get('/drinks', (req, res) => {
+//   res.render('index', { drinks: drinks });
+// });
+
+// app.listen(3000, () => {
+//   console.log('Server is running on port 3000');
+// });
+
+// const express = require('express');
+// const app = express();
+// const drinks = require('./drinks');
+
+// app.set('view engine', 'ejs');
+
+// app.get('/', (req, res) => {
+//   res.send('Welcome to the Gitpub App!');
+// });
+
+// app.get('/drinks', (req, res) => {
+//   res.render('index', { drinks: drinks });
+// });
+
+// app.get('/drinks/:id', (req, res) => {
+//   const drinkId = req.params.id;
+//   const drink = drinks[drinkId];
+//   res.render('show', { drink: drink });
+// });
+
+// app.listen(3000, () => {
+//   console.log('Server is running on port 3000');
+// })
+
+
+
+
+
+
+
+
+
+
+
