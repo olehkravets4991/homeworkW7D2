@@ -1,8 +1,42 @@
-<%- include('partial') %>
+<!-- <%- include('partial') %>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to gitPub</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      color: #333;
+    }
+  </style>
+</head>
+<script>
+    function capitalizeFirstLetter(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+  </script>
 <body>
     <h1>At foo bar</h1>
-<h2><%= drink.name %></h2>
-<img src="<%= drink.image %>" alt="<%= drink.name %>">
-<h3>Price: <%= drink.price %></h3>
-<a href="/drinks">Back</a>
+
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Gitpub App</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>At foo bar</h1>
+    
+    <h2><%= drink.charAt(0).toUpperCase() + drink.slice(1) %></h2>
+    <img src="/images/<%= drink %>.png" alt="<%= drink %>">
+    <h3>Price: $X.XX</h3>
+    <a href="/drinks">Back</a>
+  </div>
 </body>
+</html>
+

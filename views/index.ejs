@@ -1,8 +1,22 @@
-<%- include('partial') %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gitpub App</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
 <body>
-    <h1>At foo bar</h1>
-<h2><%= drink.name %></h2>
-<img src="<%= drink.image %>.png" alt="<%= drink.name %>">
-<h3>Price: <%= drink.price %></h3>
-<a href="/drinks">Back</a>
+    <h1>Welcome to Gitpub</h1>
+
+    <ul>
+        <% drinks.forEach(function(drink) { %>
+            <li>
+                <a href="/drinks/<%= drinks.indexOf(drink) %>">
+                    <%= drink.name.charAt(0).toUpperCase() + drink.name.slice(1) %>
+                </a>
+            </li>
+        <% }) %>
+    </ul>
+
+    <script src="/script.js"></script>
 </body>
+</html>
