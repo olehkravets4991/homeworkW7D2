@@ -3,7 +3,6 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-// Array of drinks
 const drinks = [
   {
     name: 'cruddy mary',
@@ -61,6 +60,7 @@ const drinks = [
 // Set the 'views' directory
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
+app.use(express.static("public"))
 
 // Route to render the index.ejs template
 app.get('/drinks', (req, res) => {
@@ -80,24 +80,6 @@ app.listen(port, () => {
 });
 
 
-
-// const express = require('express');
-// const app = express();
-// const drinks = require('./drinks');
-
-// app.set('view engine', 'ejs');
-
-// app.get('/', (req, res) => {
-//   res.send('Welcome to the Gitpub App!');
-// });
-
-// app.get('/drinks', (req, res) => {
-//   res.render('index', { drinks: drinks });
-// });
-
-// app.listen(3000, () => {
-//   console.log('Server is running on port 3000');
-// });
 
 // const express = require('express');
 // const app = express();
